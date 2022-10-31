@@ -1,0 +1,371 @@
+.navbar{
+    position:absolute;
+    width:100%;
+    z-index:10;
+    max-width:100%;
+}
+.nav-item a{
+    color: black;
+}
+.carousel-inner{
+     height: 650px;
+}
+.navbar-brand{
+    color: black;
+}
+
+
+.item, img{
+    height: 750px ;
+    width:  100% !important;
+    
+}
+
+#content h1 {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+#content p{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#places h3{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    
+}
+#places{
+    padding-left: 20px;
+    padding-right: 10px;
+    background-color: #5ce1e6;
+    
+    padding-bottom: 25px;
+}
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .thecard {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 500px;
+    border: 1px solid black;
+  
+    border-radius: 10%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+  
+    background-color: white;
+  }
+  
+  .card-img {
+    width: 500px;
+    height: 350px;
+    border-radius: 10%;
+  }
+  
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+  .thefront {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #ffffff;
+    color: #000;
+  }
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .theback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    /* height: 100%; */
+    border-radius: 10%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #fafafa;
+    color: #333;
+    text-align: center;
+    transform: rotateY(180deg);
+  }
+  
+  /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+  .thefront h5,
+  .theback h5 {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .thefront p,
+  .theback p {
+    font-family: "zilla slab", sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .map-iframe {
+    width: 500px;
+    height: 560px;
+  }
+  .map-div {
+    white-space: nowrap;
+    text-align: center;
+    width: 500px;
+    padding: 6px 0;
+  }
+  
+  
+  @media (max-width: 1565px) {
+    .thecard {
+      width: 400px;
+      height: 500px;
+      background-color: white;
+    }
+  
+    .card-img {
+      width: 400px;
+      height: 300px;
+      border-radius: 10%;
+    }
+  
+    .map-iframe {
+      width: 400px;
+      height: 460px;
+    }
+    .map-div {
+      white-space: nowrap;
+      text-align: center;
+      width: 400px;
+      padding: 6px 0;
+    }
+  }
+  
+  @media (max-width: 1265px) {
+    .thecard {
+      width: 350px;
+      height: 450px;
+      background-color: white;
+    }
+  
+    .card-img {
+      width: 350px;
+      height: 270px;
+      border-radius: 10%;
+    }
+  
+    .map-iframe {
+      width: 350px;
+      height: 410px;
+    }
+    .map-div {
+      white-space: nowrap;
+      text-align: center;
+      width: 350px;
+      padding: 6px 0;
+    }
+  }
+  
+  @media (max-width: 1120px) {
+    .thecard {
+      width: 400px;
+      height: 500px;
+      background-color: white;
+    }
+  
+    .card-img {
+      width: 400px;
+      height: 300px;
+      border-radius: 10%;
+    }
+  
+    .map-iframe {
+      width: 400px;
+      height: 460px;
+    }
+    .map-div {
+      white-space: nowrap;
+      text-align: center;
+      width: 400px;
+      padding: 6px 0;
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .thecard {
+      width: 500px;
+      height: 600px;
+      background-color: white;
+    }
+  
+    .card-img {
+      width: 500px;
+      height: 350px;
+      border-radius: 10%;
+    }
+  
+    .map-iframe {
+      width: 500px;
+      height: 560px;
+    }
+    .map-div {
+      white-space: nowrap;
+      text-align: center;
+      width: 500px;
+      padding: 6px 0;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .thecard {
+      width: 350px;
+      height: 500px;
+      background-color: white;
+    }
+  
+    .card-img {
+      width: 350px;
+      height: 250px;
+      border-radius: 10%;
+    }
+  
+    .map-iframe {
+      width: 350px;
+      height: 460px;
+    }
+    .map-div {
+      white-space: nowrap;
+      text-align: center;
+      width: 350px;
+      padding: 6px 0;
+    }
+  }
+  
+#features{
+    padding:7% 15%;
+  
+    position: relative;
+   
+}
+.feature-box{
+    text-align: center;
+    padding: 5%;
+   
+    
+}
+.feature-box h3{
+    font-family: "Montserrat-bold";
+    font-size: 1.5rem;
+    padding-top: 25px;
+    padding-bottom: 15px;
+
+}
+.feature-box p{
+    color: #8f8f8f;
+}
+.btn{
+  border-radius: 25px;
+  margin-top: 25px;
+  margin-bottom:25px ;
+}
+.btn a{
+  text-decoration: none;
+  color: white;
+  
+}
+#hotel{
+  text-align: center;
+  
+  
+}
+#hotel h1{
+  font-size: 3rem;
+}
+#footer{
+  padding: 7% 15%;
+    text-align: center;
+}
+.social-icon{
+  margin: 20px 10px;
+}
+/*******************opening and closing css*****************************/
+.openinghours {
+    font-family:Lucida Console;
+    border-radius:4px;
+    margin:10px;
+    box-shadow: 0 0 10px black;
+    padding:0 10px 0 10px;
+    overflow: hidden;
+    display: inline-block;
+}
+.openinghourscontent {
+    float:right;
+}
+.openinghourscontent h2 {
+    display:block;
+    text-align:center;
+    margin-top:.33em;
+}
+.openinghourscontent button {
+    color:white;
+    font-family:Courier New;
+    font-size:large;
+    font-weight:bolder;
+    background-color:#4679BD;
+    border-radius:4px;
+    width:100%;
+    margin-bottom:10px;
+}
+.today {
+    color: #8AC007;
+}
+.opening-hours-table tr td:first-child {
+    font-weight:bold;
+}
+#open-status {
+    display:block;
+    margin-top:-1em;
+    text-align:center;
+    border:dotted lightgrey 3px;
+}
+.openorclosed:after {
+    content:" open during these hours:";
+}
+.open {
+    color:green;
+}
+.open:after {
+    content:" Open";
+    color: #6C0;
+}
+.closed:after {
+    content:" Closed";
+    color: red;
+}
+.opening-hours-table tr td {
+    padding:5px;
+}

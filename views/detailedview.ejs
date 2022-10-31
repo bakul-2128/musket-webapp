@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Adding Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--Adding CSS-->
+  <link rel="stylesheet" href="css/detailedview.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  <!--jquery for bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <!--Adding icons-->
+  <script src="https://kit.fontawesome.com/9ea776f470.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  
+    <!--carousel-->
+    <section>
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="<%=link1%>"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="<%=slink2%>"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="<%=slink3%>"
+              class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!--Content-->
+    <section id="content">
+      <h1><%=title%></h1>
+      <p><%=content%> </p>
+    </section>
+    <section id="hotel">
+        <h1>Book Your E-Ticket</h1>
+        <button type="button" class="btn btn-dark"><a href="/bookingform"> Book Now</a></button>
+      </section>
+      <br>
+      <br><br>
+
+      <section class="openinghours" id="hotel">
+        <div class="openinghourscontent section">
+            <div class="header">
+                 <h2>Opening hours</h2>
+     <span id="open-status"><small class="openorclosed">We are</small></span>
+    
+            </div>
+            <table class="opening-hours-table">
+                <tr id="Monday" itemprop="openingHours" title="Open Monday at 9am to 6pm">
+                    <td>Monday</td>
+                    <td class="opens"><%=open%></td>
+                    <td>-</td>
+                    <td class="closes"><%=close%></td>
+                </tr>
+                <tr id="Tuesday" itemprop="openingHours" title="Open Tuesday at 9am to 6pm">
+                    <td>Tuesday</td>
+                    <td class="opens"><%=open%></td>
+                    <td>-</td>
+                    <td class="closes"><%=close%></td>
+                </tr>
+                <tr id="Wednesday" itemprop="openingHours" title="Open Wednesday at 9am to 6pm">
+                    <td>Wednesday</td>
+                    <td class="opens"><%=open%></td>
+                    <td>-</td>
+                    <td class="closes"><%=close%></td>
+                </tr>
+                <tr id="Thursday" itemprop="openingHours" title="Open Thursday at 9am to 8pm">
+                    <td>Thursday</td>
+                    <td class="opens"><%=open%></td>
+                    <td>-</td>
+                    <td class="closes"><%=close%></td>
+                </tr>
+                <tr id="Friday" itemprop="openingHours" title="Open Friday at 9am to 6pm">
+                    <td>Friday</td>
+                    <td class="opens"><%=open%></td>
+                    <td>-</td>
+                    <td class="closes"><%=close%></td>
+                </tr>
+                <tr id="Saturday" itemprop="openingHours" title="Open Saturday at 10am to 6pm">
+                    <td>Saturday</td>
+                    <td class="opens"><%=open%></td>
+                    <td>-</td>
+                    <td class="closes"><%=close%></td>
+                </tr>
+                <tr id="Sunday" itemprop="openingHours" title="Open Sunday at 11am to 4pm">
+                    <td>Sunday</td>
+                    <td class="opens"><%=open%></td>
+                    <td>-</td>
+                    <td class="closes"><%=close%></td>
+                </tr>
+            </table>
+            <!-- <button style="cursor: pointer;" title="Make an Apointment Online" data-appointlet="u387">Make an Apointment Online</button> -->
+            <script>
+                (function(e, t, n, r) {
+                    if (e) return;
+                    t._appt = true;
+                    var i = n.createElement(r),
+                        s = n.getElementsByTagName(r)[0];
+                    i.async = true;
+                    i.src = '//dje0x8zlxc38k.cloudfront.net/loaders/s-min.js';
+                    s.parentNode.insertBefore(i, s)
+                })(window._appt, window, document, "script")
+
+
+                
+            </script>
+        </div>
+    </section>
+      <section id="hotel">
+
+      <h3>Get Directions</h3>
+      
+        <div>
+            <iframe
+            src="<%=maplink%>"
+            width="600"
+            height="250"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <!-- <iframe class="map-iframe" frameborder="0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13765.607815412608!2d79.0209391314858!3d30.396335708088547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909b0abf4d258ab%3A0x1e3cde051f2e7157!2sAugustmuni%2C%20Uttarakhand%20246421!5e0!3m2!1sen!2sin!4v1646798871660!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+        </div>
+          
+    
+    </section>
+    </body>
+    </html>

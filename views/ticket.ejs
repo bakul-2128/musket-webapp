@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+  <head>
+    <%- include('./partials/head'); %>
+  </head>
+  <body>
+    <%- include('./partials/header',{userName:user}); %>
+    <!-- #header -->
+
+    <!-- start banner Area -->
+    <section class="banner-area relative" id="home">
+      <div class="overlay overlay-bg"></div>
+      <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="about-content col-lg-12">
+            <h1 class="text-white">Buy Tickets</h1>
+            <p class="text-white link-nav">
+              <a href="index.html">Home </a>
+              <span class="lnr lnr-arrow-right"></span>
+              <a href="ticket.html"> Tickets</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Start upcoming-exibition Area -->
+    <section class="upcoming-exibition-area section-gap">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="menu-content pb-70 col-lg-8">
+            <div class="title text-center">
+              <h1 class="mb-10">Let's Start the journy</h1>
+              <p>select the city where you wanted visit Museum and Monuments</p>
+            </div>
+          </div>
+        </div>
+        <section id="gallery">
+          <div class="container">
+            <div class="row">
+              <%admindata.forEach(post => {%>
+            <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img src="<%=post.link1%>" alt="" class="card-img-top" style="height: 250px;">
+              <div class="card-body">
+                <h5 class="card-title"><%=post.title%></h5>
+                <p class="card-text"><%=post.content.substring(0, 260) + " ..."%></p>
+               <!-- <a href="/posts/<%=post.title%>" class="btn btn-outline-success btn-sm">Read More</a> -->
+               <a href="/bookingform" class="btn btn-outline-success btn-sm">Book Ticket</a>
+              </div>
+             </div>
+            </div>
+            <% }) %>
+            
+          </div>
+        </div>
+        </section>
+      </div>
+    </section>
+    <%- include('./partials/footer'); %>
+
+
+

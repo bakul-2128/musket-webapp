@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+  <head>
+    <%- include('./partials/head'); %>
+  </head>
+  <body>
+    <%- include('./partials/header',{userName:user}); %>
+    
+    <!-- #header -->
+
+    <!-- start banner Area -->
+    <section class="banner-area relative" id="home">
+      <div class="overlay overlay-bg"></div>
+      <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="about-content col-lg-12">
+            <h1 class="text-white">Contact Us</h1>
+            <p class="text-white link-nav">
+              <a href="index.html">Home </a>
+              <span class="lnr lnr-arrow-right"></span>
+              <a href="contact.html"> Contact Us</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Start contact-page Area -->
+    <section class="contact-page-area section-gap" style="padding-top: 20px">
+      <div class="container">
+        <div class="row">
+          <div style="width: 100%">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234742.4718998111!2d79.8286670109806!3d23.17563314211076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981ae1a0fb6a97d%3A0x44020616bc43e3b9!2sJabalpur%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1648192290526!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="col-lg-4 d-flex flex-column address-wrap pt-50">
+            <div class="single-contact-address d-flex flex-row">
+              <div class="icon">
+                <span class="lnr lnr-home"></span>
+              </div>
+              <div class="contact-details">
+                <h5>Dhaka, Bangladesh</h5>
+                <p>56/8, West Panthapath</p>
+              </div>
+            </div>
+            <div class="single-contact-address d-flex flex-row">
+              <div class="icon">
+                <span class="lnr lnr-phone-handset"></span>
+              </div>
+              <div class="contact-details">
+                <h5>00 (880) 9865 562</h5>
+                <p>Mon to Fri 9am to 6 pm</p>
+              </div>
+            </div>
+            <div class="single-contact-address d-flex flex-row">
+              <div class="icon">
+                <span class="lnr lnr-envelope"></span>
+              </div>
+              <div class="contact-details">
+                <h5>support@codethemes.com</h5>
+                <p>Send us your query anytime!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 pt-50">
+            <form
+              class="form-area"
+              id="myForm"
+              action="mail.php"
+              method="post"
+              class="contact-form text-right"
+            >
+              <div class="row">
+                <div class="col-lg-6 form-group">
+                  <input
+                    name="name"
+                    placeholder="Enter your name"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter your name'"
+                    class="common-input mb-20 form-control"
+                    required=""
+                    type="text"
+                  />
+
+                  <input
+                    name="email"
+                    placeholder="Enter email address"
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter email address'"
+                    class="common-input mb-20 form-control"
+                    required=""
+                    type="email"
+                  />
+
+                  <input
+                    name="subject"
+                    placeholder="Enter your subject"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter your subject'"
+                    class="common-input mb-20 form-control"
+                    required=""
+                    type="text"
+                  />
+                  <div class="mt-20 alert-msg" style="text-align: left"></div>
+                </div>
+                <div class="col-lg-6 form-group">
+                  <textarea
+                    class="common-textarea form-control"
+                    name="message"
+                    placeholder="Messege"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Messege'"
+                    required=""
+                  ></textarea>
+                  <button
+                    class="primary-btn mt-20 text-white"
+                    style="float: right"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End contact-page Area -->
+
+    <!-- start footer Area -->
+    <footer class="text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">FOOTER CONTENT</h5>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae modi cum ipsam ad, illo possimus laborum ut reiciendis
+                obcaecati. Ducimus, quas. Corrupti, pariatur eaque? Reiciendis
+                assumenda iusto sapiente inventore animi?
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Usefull Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="about.html" class="text-dark"><u>About </u></a>
+                </li>
+                <li>
+                  <a href="gallery.html" class="text-dark"><u>Gallery</u></a>
+                </li>
+                <li>
+                  <a href="event.html" class="text-dark"><u>Events</u></a>
+                </li>
+                <li>
+                  <a href="contact.html" class="text-dark"><u>Contact</u></a>
+                </li>
+              </ul>
+            </div>
+            <section class="col-lg-3">
+              <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3 pr-4">Register for free</span>
+                <button
+                  type="button"
+                  class="btn btn-outline-dark pl-4 btn-rounded"
+                >
+                  Sign up!
+                </button>
+              </p>
+              <br />
+              <section class="mb-4 text-center">
+                <!-- Facebook -->
+                <a
+                  class="btn btn-primary"
+                  style="background-color: #3b5998"
+                  href="#!"
+                  role="button"
+                  ><i class="fa fa-facebook-f"></i
+                ></a>
+
+                <!-- Twitter -->
+                <a
+                  class="btn btn-primary"
+                  style="background-color: #55acee"
+                  href="#!"
+                  role="button"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+
+                <!-- Google -->
+                <a
+                  class="btn btn-primary"
+                  style="background-color: #dd4b39"
+                  href="#!"
+                  role="button"
+                  ><i class="fa fa-google"></i
+                ></a>
+
+                <!-- Instagram -->
+                <a
+                  class="btn btn-primary"
+                  style="background-color: #ac2bac"
+                  href="#!"
+                  role="button"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+
+                <!-- Github -->
+              </section>
+            </section>
+
+            <!--Grid column-->
+
+            <!--Grid column-->
+
+            <!--Grid column-->
+
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <!-- Section: CTA -->
+
+        <!-- Section: CTA -->
+
+        <!-- Section: Social media -->
+
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: black">
+        © 2022 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+          >MDBootstrap.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- End footer Area -->
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"
+    ></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/justified.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

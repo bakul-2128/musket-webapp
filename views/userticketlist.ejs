@@ -1,0 +1,107 @@
+<%- include('adminheader') %>
+                
+                <!-- DRIVER PARTNER TABLES -->
+                
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        User Ticket List
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple">
+                            <thead>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>User Id</th>
+                                    <th>Museum Name</th>
+                                    <th>Contact No</th>
+                                    <th>Date Of Visit</th>
+                                    <th>No of Person</th>
+                                    <th>Time Of Visit</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>User Id</th>
+                                    <th>Museum Name</th>
+                                    <th>Contact No</th>
+                                    <th>Date Of Visit</th>
+                                    <th>No of Person</th>
+                                    <th>Time Of Visit</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <%ticketdatalist.forEach(user => {%>
+                                <tr>
+                                    <td><%=user.full_name%></td>
+                                    <td><%=user.user_id%></td>
+                                    <td><%=user.Museum%></td>
+                                    <td><%=user.contact%></td>
+                                    <td><%=user.date%></td>
+                                    <td><%=user.no_person%></td>
+                                    <td><%=user.time%></td>
+                                </tr>
+                                <%})%>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- DRIVER PARTNER -->
+
+            </div>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Musket 2022</div>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <!-- <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script >
+        window.addEventListener('DOMContentLoaded', event => {
+    // Simple-DataTables
+    // https://github.com/fiduswriter/Simple-DataTables/wiki
+
+    const datatablesSimple = document.getElementById('datatablesSimple');
+    if (datatablesSimple) {
+        new simpleDatatables.DataTable(datatablesSimple);
+    }
+});
+    </script>
+
+    <script>window.addEventListener('DOMContentLoaded', event => {
+
+        // Toggle the side navigation
+        const sidebarToggle = document.body.querySelector('#sidebarToggle');
+        if (sidebarToggle) {
+            // Uncomment Below to persist sidebar toggle between refreshes
+            // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+            //     document.body.classList.toggle('sb-sidenav-toggled');
+            // }
+            sidebarToggle.addEventListener('click', event => {
+                event.preventDefault();
+                document.body.classList.toggle('sb-sidenav-toggled');
+                localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+            });
+        }
+    
+    });</script>
+</body>
+</html>

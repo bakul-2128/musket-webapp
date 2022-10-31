@@ -1,0 +1,112 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <%- include('./partials/head'); %>
+  </head>
+  <body>
+    <%- include('./partials/header',{userName:user}); %>
+  <form  action="/bookingform"  method="post">
+    <section class="text-gray-600 body-font relative">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Book Your Ticket</h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Enter The Following Details.</p>
+        </div>
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+          <div class="flex flex-wrap -m-2">
+         
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="name" class="leading-7 text-sm text-gray-600">Full Name</label>
+                <input type="text" id="full_name" name="full_name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="email" class="leading-7 text-sm text-gray-600">User Id</label>
+                <input type="email" id="user_id" name="user_id" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="name" class="leading-7 text-sm text-gray-600">Name Of Museum/Monument </label>
+                <input type="text" id="full_name" name="Museum" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="name" class="leading-7 text-sm text-gray-600">Phone no</label>
+                <input type="text" id="full_name" name="contact" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+            </div>
+            <div class="p-2 w-full">
+              <div class="relative">
+                <div class="relative">
+                  <label for="name" class="leading-7 text-sm text-gray-600">Choose Date</label> 
+                  <input id="date" name="date" type="date" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                </div>
+              </div>
+            </div>
+
+            <div class="p-2 w-1/2">
+              <label  class="leading-7 text-sm text-gray-600">No Of Person</label>
+              <select  name="no_person" id="no_person"  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label class="leading-7 text-sm text-gray-600">Choose timeslot</label>
+                <select name="time" id="time" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                  <option value="10:00-12:00">10:00-12:00</option>
+                  <option value="01:00-03:00">01:00-02:00</option>
+                  <option value="04:00-06:00">04:00-06:00</option>
+                </select>
+              </div>
+            </div>
+           <!--  <input  type="hidden"  name="price" id="price" value="2">
+						<input  type="hidden"  name="order_id" id="order_id" value="<?php  echo "ORDS" . rand(1000,9999999); ?>">
+        -->
+            <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+              <button id="checkout" type="submit" value="Checkout" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">get Ticket</button>
+            </div>
+  
+            <!-- <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+              <a class="text-indigo-500">example@email.com</a>
+              <p class="leading-normal my-5">49 Smith St.</p>
+              -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section> 
+    </form>  
+  </body>
+
+</html>
+
+
